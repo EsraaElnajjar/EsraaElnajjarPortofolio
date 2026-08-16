@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
 import { portfolio } from '../data/portfolio'
+import type { PortfolioProject } from '../data/portfolio'
 import { fadeUp, viewportOnce } from '../motion/variants'
 import { ParallaxSection } from './ParallaxSection'
 import { ProjectCard } from './ProjectCard'
@@ -28,7 +29,7 @@ export function Projects() {
         </div>
 
         <div className="projects__list">
-          {portfolio.projects.map((project, index) => (
+          {(portfolio.projects as unknown as PortfolioProject[]).map((project: PortfolioProject, index: number) => (
             <ProjectCard
               key={project.title}
               project={project}
