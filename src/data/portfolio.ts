@@ -1,6 +1,7 @@
 import groceryImage from '../assets/projects/project-grocery.png'
 import salezeusImage from '../assets/projects/project-salezeus.png'
 import bytelyImage from '../assets/projects/project-bytely.png'
+import pladImage from '../assets/projects/project-plad.png'
 import sorianaImage from '../assets/projects/project-soriana.png'
 import yslamoAppImage from '../assets/projects/project-yslamo-app.png'
 import yslamoDeliveryImage from '../assets/projects/project-yslamo-delivery.png'
@@ -10,15 +11,18 @@ import gtlImage from '../assets/projects/project-gtl.png'
 import donutImage from '../assets/projects/project-donut.png'
 import oneKadoImage from '../assets/projects/project-onekado.png'
 import charcoalImage from '../assets/projects/project-charcoal.png'
+import iwYouthImage from '../assets/projects/project-iwyouth.png'
 import booslaaImage from '../assets/projects/project-booslaa.png'
 import skincareImage from '../assets/projects/project-skincare.png'
 import rawasiImage from '../assets/projects/project-rawasi.png'
 import salezeusLogo from '../assets/logos/salezeus.png'
 import bytelyLogo from '../assets/logos/bytely.png'
+import pladLogo from '../assets/logos/plad.png'
 import sorianaLogo from '../assets/logos/soriana.png'
 import yslamoLogo from '../assets/logos/yslamo.jpeg'
 import rawasiLogo from '../assets/logos/rawasi.svg'
 import charcoalLogo from '../assets/logos/charcoal.svg'
+import iwYouthLogo from '../assets/logos/iwyouth.png'
 import ostaLogo from '../assets/logos/osta.png'
 import gtlLogo from '../assets/logos/gtl.png'
 import donutLogo from '../assets/logos/donut.png'
@@ -70,6 +74,10 @@ export const portfolio = {
   name: 'Esraa Elnajjar',
   fullName: 'ESRAA ELKHADRY MOHAMMED ELNAJJAR',
   title: 'Super Full Stack Developer (Web & Mobile)',
+  /** Live site URL (no trailing slash). Keep in sync with VITE_SITE_URL in .env for link previews. */
+  siteUrl:
+    (import.meta.env.VITE_SITE_URL as string | undefined)?.replace(/\/$/, '') ||
+    'https://esraaelnajjar.github.io/EsraaElnajjarPortofolio',
   tagline:
     'I ship full-stack web apps, mobile products, and interfaces — pharmacy systems, Zakah tools, grocery apps, and university platforms built end to end.',
   email: 'israaelnajjar664@gmail.com',
@@ -180,6 +188,23 @@ export const portfolio = {
       ],
     },
     {
+      title: 'Plad Academy',
+      description:
+        'Arabic leadership academy site for Palestinian youth — programs, training model, impact stats, and member access in a clean bilingual layout.',
+      tech: ['Web', 'UI/UX', 'Education'],
+      image: pladImage,
+      imageAlt:
+        'Plad Academy homepage with Arabic leadership headline, impact stats, and hero collage',
+      logo: pladLogo,
+      logoBg: 'light',
+      links: [
+        {
+          label: 'Live site',
+          href: 'https://pladacademy.org/',
+        },
+      ],
+    },
+    {
       title: 'Soriana Al-Aqeeq',
       description:
         'Hospitality website for Soriana Al Aqeeq Hotel in Old Damascus — Arabic-first booking experience with rooms, gallery, and WhatsApp conversion.',
@@ -252,6 +277,23 @@ export const portfolio = {
         {
           label: 'Live site',
           href: 'https://dogakomurculuk.com/',
+        },
+      ],
+    },
+    {
+      title: 'Islamic World Youth Academy - أكاديمية شباب العالم الإسلامي',
+      description:
+        'Global Arabic platform for preparing conscious, influential youth leaders — programs, impact stats, guests, and join flows across participating countries.',
+      tech: ['Web', 'UI/UX', 'Education'],
+      image: iwYouthImage,
+      imageAlt:
+        'Islamic World Youth Academy homepage with Arabic headline, impact stats, and youth hero image',
+      logo: iwYouthLogo,
+      logoBg: 'light',
+      links: [
+        {
+          label: 'Live site',
+          href: 'https://iwyouthacademy.org/',
         },
       ],
     },
